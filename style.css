@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap");
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --font-size: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 700px;
+  display: flex;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 40px;
+}
+.card img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.card h2 {
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card p {
+  color: var(--Transparent-white);
+  margin-bottom: 50px;
+  font-size: var(--font-size);
+}
+.card button {
+  background-color: transparent;
+  color: var(--Transparent-white);
+  border: 2px solid var(--Transparent-white);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: color 0.15s;
+}
+.card:nth-of-type(1) {
+  background-color: var(--Bright-orange);
+  border-radius: 5px 0px 0px 5px;
+}
+.card:nth-of-type(2) {
+  background-color: var(--Dark-cyan);
+}
+.card:nth-of-type(3) {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0px 5px 5px 0px;
+}
+.card:nth-of-type(1) button:hover {
+  background-color: var(--Very-light-gray);
+  color: var(--Bright-orange);
+}
+.card:nth-of-type(2) button:hover {
+  background-color: var(--Very-light-gray);
+  color: var(--Dark-cyan);
+}
+.card:nth-of-type(3) button:hover {
+  background-color: var(--Very-light-gray);
+  color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 356px;
+    justify-content: center;
+    align-items: center;
+  }
+  .card:nth-of-type(1) {
+    background-color: var(--Bright-orange);
+    border-radius: 5px 5px 0px 0px;
+  }
+  .card:nth-of-type(3) {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0px 0px 5px 5px;
+  }
+}
